@@ -57,7 +57,8 @@ public class EstanteComposite implements Objeto{
 
     @Override
     public void imprimir(){
-        System.out.print("Prateleira de id: "+id+"\n");
+        System.out.print("Estante de id: "+id+"; Custo total: "+getCusto()+"; Preço total: "+getPreco());
+        System.out.println();
         for(Objeto objeto : objetos){
             System.out.print("  ");
             objeto.imprimir();

@@ -3,8 +3,22 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CaixaComposite implements Objeto{
-        private String id;
-        private String remetente;
+    private String id;
+    private String remetente;
+    
+
+    public CaixaComposite(String id, String remetente) {
+        this.id = id;
+        this.remetente = remetente;
+    }
+
+    public String getRemetente() {
+        return remetente;
+    }
+
+    public void setRemetente(String remetente) {
+        this.remetente = remetente;
+    }
 
     public String getId() {
         return id;
@@ -47,7 +61,7 @@ public class CaixaComposite implements Objeto{
     }
 
     @Override
-        public double getPreco() {
+    public double getPreco() {
         double somaPreco = 0;
         for(Objeto objeto : objetos){
             somaPreco += objeto.getPreco();
@@ -57,9 +71,10 @@ public class CaixaComposite implements Objeto{
 
     @Override
     public void imprimir(){
-        System.out.print("Prateleira de id: "+id+"\n");
+        System.out.print("Caixa de id: "+id+"; Custo total: "+getCusto()+"; Preço total: "+getPreco()+"; Remetente: "+getRemetente());
+        System.out.println();
         for(Objeto objeto : objetos){
-            System.out.print("  ");
+            System.out.print("    ");
             objeto.imprimir();
         }
     } 
