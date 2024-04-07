@@ -1,5 +1,7 @@
 ## Getting Started
 
-Interface: Objeto\n
-Classes Composite: Estante, Caixa\n
+Interface: Objeto
+
+Classes Composite: Estante, Caixa
+
 Classes Folha: Geladeira, Protetor Solar, Ar Condicionado
