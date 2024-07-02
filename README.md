@@ -1,4 +1,4 @@
-## Getting Started
+## Simples demonstração do padrão de projeto Composite
 
 Sistema Armazém
 
