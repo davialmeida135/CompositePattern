@@ -45,5 +45,20 @@ public class ProtetorSolar implements Objeto{
         System.out.print("Protetor solar "+marca+"; Custo:R$ "+custo+"; Preço:R$ "+preco);
         System.out.println();
     }
+    @Override
+    public void add(Objeto... objetos) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
+    }
+    @Override
+    public void remove(Objeto objeto) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'remove'");
+    }
+    @Override
+    public Objeto getComposite() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getComposite'");
+    }
     
 }

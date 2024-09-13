@@ -5,6 +5,7 @@ import java.util.List;
 public class EstanteComposite implements Objeto{
 
     private String id;
+    private List<Objeto> objetos = new ArrayList<Objeto>();
 
     public String getId() {
         return id;
@@ -17,26 +18,16 @@ public class EstanteComposite implements Objeto{
     public EstanteComposite(String id) {
         this.id = id;
     }
-    public EstanteComposite(){}
+    public EstanteComposite(){} 
 
-
-
-    private List<Objeto> objetos = new ArrayList<Objeto>();
-
+    @Override
     public void add(Objeto ...objetos){
         this.objetos.addAll(Arrays.asList(objetos));
     }
-
-    public void add(Objeto objeto, int quantidade){
-        for(int i=0;i<quantidade;i++){
-            this.objetos.add(objeto);
-        }
+    @Override
+        public void remove(Objeto objeto){
+            this.objetos.remove(objeto);
     }
-
-    public void remove(Objeto objeto){
-        this.objetos.remove(objeto);
-    }
-
     @Override
     public double getCusto() {
         double somaCusto = 0;
@@ -63,5 +54,19 @@ public class EstanteComposite implements Objeto{
             System.out.print("  ");
             objeto.imprimir();
         }
+    }
+    public void add(Objeto objeto, int quantidade){
+        for(int i=0;i<quantidade;i++){
+            this.objetos.add(objeto);
+        }
+    }
+
+    
+
+    
+
+    @Override
+    public Objeto getComposite() {
+        return this;
     } 
 }

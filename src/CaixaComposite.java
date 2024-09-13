@@ -5,7 +5,7 @@ import java.util.List;
 public class CaixaComposite implements Objeto{
     private String id;
     private String remetente;
-    
+    private List<Objeto> objetos = new ArrayList<Objeto>();
 
     public CaixaComposite(String id, String remetente) {
         this.id = id;
@@ -35,22 +35,20 @@ public class CaixaComposite implements Objeto{
 
 
 
-    private List<Objeto> objetos = new ArrayList<Objeto>();
-
+    
+    @Override
     public void add(Objeto ...objetos){
         this.objetos.addAll(Arrays.asList(objetos));
     }
-
     public void add(Objeto objeto, int quantidade){
         for(int i=0;i<quantidade;i++){
             this.objetos.add(objeto);
         }
     }
-
+    @Override
     public void remove(Objeto objeto){
         this.objetos.remove(objeto);
     }
-
     @Override
     public double getCusto() {
         double somaCusto = 0;
@@ -77,5 +75,11 @@ public class CaixaComposite implements Objeto{
             System.out.print("    ");
             objeto.imprimir();
         }
+    }
+
+    @Override
+    public Objeto getComposite() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getComposite'");
     } 
 }

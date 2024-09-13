@@ -7,9 +7,6 @@ public class App {
         Objeto geladeira2 = new Geladeira("Consul",1300,3000);
         Objeto protetor1 = new ProtetorSolar("Head and shoulder", 60, 15, 40);
         Objeto protetor2 = new ProtetorSolar("Pantene", 80, 25, 70);
-
-
-
         estante1.add(geladeira1);
         estante1.add(geladeira2);
         caixa1.add(protetor1);
